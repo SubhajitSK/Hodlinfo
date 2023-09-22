@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodlinfo</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <body>
+      <header>
+        <div class="left-section">
+          <div class="logo-img">
+            <img src="./src/img/HODLINFO.png" alt="Hodlinfo Logo" />
+          </div>
+        </div>
+        <div class="middle-section">
+          <div class="crypto-selector">
+            <select id="cryptoSelector1">
+              <option value="BTC">INR</option>
+            </select>
+            <select id="cryptoSelector2">
+              <option value="BTC">BTC</option>
+            </select>
+            <button class="button-1">
+              <option value="BTC">BUY BTC</option>
+            </button>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="buttons">
+            <svg
+              class="circular-progressbar"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              width="200"
+              height="200"
+            >
+              <path
+                class="CircularProgressbar-path"
+                d="
+              M 50,50
+              m 0,-46
+              a 46,46 0 1 1 0,92
+              a 46,46 0 1 1 0,-92"
+                stroke-width="8"
+                fill-opacity="0"
+              ></path>
+              <text x="50" y="50" class="countdown">60</text>
+            </svg>
+            <button id="telegramButton">
+              <img src="./src/img/telegram.png" alt="tg" class="tg-logo" />
+              <span class="button-text">Connect Telegram</span>
+            </button>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </header>
+      <div class="average-container">
+        <div class="average-item">
+          <div class="average-value color-green" id="baseUnit"></div>
+          <div class="average-label">Name</div>
+        </div>
+        <div class="average-item">
+          <div class="average-value color-green" id="buyPrice"></div>
+          <div class="average-label">Buy Price</div>
+        </div>
+        <div class="average-item">
+          <div class="average-text">Best Price to Trade</div>
+          <div class="average-heading" id="lastPrice"></div>
+          <div class="average-subtext">
+            Average <span id="tickerName"></span> net price including commission
+          </div>
+        </div>
+        <div class="average-item">
+          <div class="average-value color-green" id="sellPrice"></div>
+          <div class="average-label">Sell Price</div>
+        </div>
+        <div class="average-item">
+          <div class="average-value color-green" id="volume"></div>
+          <div class="average-label">Volume</div>
+        </div>
+      </div>
+      <main>
+        <table class="scroll-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Last Price</th>
+              <th>Buy Price</th>
+              <th>Sell Price</th>
+              <th>Volume</th>
+              <th>Base Unit</th>
+            </tr>
+          </thead>
+          <tbody id="cryptoTable"></tbody>
+        </table>
+      </main>
+      <div class="install-button-container">
+        <button class="add-button" id="installButton">
+          Add Hodlinfo to Home Screen
+        </button>
+      </div>
+      <script src="./src/script.js"></script>
+    </body>
+  </body>
+</html>

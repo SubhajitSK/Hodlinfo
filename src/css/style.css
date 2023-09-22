@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color1: #3dc6c1;
+  --text-color: #999999;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #191d28;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img img {
+  height: 45px;
+  padding: 18px;
+}
+
+.middle-section {
+  flex-grow: 1;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.crypto-selector {
+  display: flex;
+}
+
+.circular-progressbar {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.CircularProgressbar-path {
+  stroke: var(--color1);
+  stroke-linecap: round;
+  fill: none;
+  stroke-width: 8px;
+  stroke-dasharray: 289.027px;
+  stroke-dashoffset: 52.9882px;
+  transition: stroke-dashoffset 0.5s ease;
+  z-index: 1;
+}
+
+.countdown {
+  font-size: 45px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  fill: var(--color1);
+}
+
+.crypto-selector select {
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2e3241;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.crypto-selector select:focus {
+  border: 2px solid #494e57;
+}
+
+.button-1 {
+  font-family: "Oswald", sans-serif;
+  padding: 7px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2e3241;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button-1:focus {
+  border: 2px solid #494e57;
+}
+
+.crypto-selector select:focus {
+  outline: none;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tg-logo {
+  height: 18px;
+  filter: invert(100%);
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.button-text {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+#telegramButton {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--color1);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin-right: 15px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin-right: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f8f9fa;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color1);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2e3241;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.average-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.average-item {
+  text-align: center;
+  flex: 1;
+}
+
+.average-value {
+  font-size: 40px;
+  color: var(--color1);
+}
+
+.average-label {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.average-text {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.average-subtext {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.average-heading {
+  font-size: 60px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+main {
+  padding: 25px;
+  overflow-x: auto;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: #0000003f 0 1px 2px;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  overflow: hidden;
+}
+
+th,
+td {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px;
+  text-align: center;
+  background-color: transparent;
+}
+
+th {
+  color: var(--text-color);
+}
+
+tbody tr {
+  background-color: #2e3241;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.green-text {
+  color: var(--color1);
+}
+
+.red-text {
+  color: #da5757;
+}
+
+body:not(.dark-mode) {
+  background-color: #ffffff;
+  color: #000000;
+}
+body:not(.dark-mode) table {
+  color: #000000;
+}
+
+body:not(.dark-mode) table td {
+  background-color: #f8f9fa;
+}
+body:not(.dark-mode) .crypto-selector select {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+body:not(.dark-mode) .button-1 {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+.install-button-container {
+  background-color: #191d28;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.add-button {
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 2px solid var(--color1);
+  background-color: transparent;
+  color: #17a2b8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.add-button:hover {
+  background-color: var(--color1);
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .left-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crypto-selector select {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .button-1 {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1034px) {
+  .logo-img img {
+    height: 40px;
+    padding-bottom: 10px;
+  }
+
+  .average-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 30px;
+  }
+
+  .average-item {
+    text-align: center;
+    flex: 1;
+  }
+
+  .average-value {
+    font-size: 14px;
+  }
+
+  .average-label {
+    font-size: 10px;
+  }
+
+  .average-text {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .average-subtext {
+    font-size: 8px;
+  }
+
+  .average-heading {
+    font-size: 30px;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  td,
+  th {
+    font-size: 20px;
+    padding: 8px;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
