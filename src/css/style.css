@@ -400,6 +400,6 @@ body:not(.dark-mode) .button-1 {
   th {
     font-size: 20px;
     padding: 8px;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
   }
 }
