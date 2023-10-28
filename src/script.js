@@ -34,7 +34,7 @@ function updateProgress() {
 
 async function fetchData() {
   try {
-    const response = await fetch("http://192.168.29.108:3000/api/tickers");
+    const response = await fetch("/api/tickers");
     const data = await response.json();
 
     const tableBody = document.getElementById("cryptoTable");
